@@ -1,0 +1,27 @@
+﻿namespace DJCWebApi.Models
+{
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using System.Diagnostics;
+    using System.Runtime.CompilerServices;
+
+    public class ChangePasswordBindingModel
+    {
+        [CompilerGenerated, DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string <OldPassword>k__BackingField;
+        [CompilerGenerated, DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string <NewPassword>k__BackingField;
+        [CompilerGenerated, DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private string <ConfirmPassword>k__BackingField;
+
+        [Required, DataType((DataType) DataType.Password), Display(Name="Current password")]
+        public string OldPassword { get; set; }
+
+        [Required, StringLength(100, ErrorMessage="The {0} must be at least {2} characters long.", MinimumLength=6), DataType((DataType) DataType.Password), Display(Name="New password")]
+        public string NewPassword { get; set; }
+
+        [DataType((DataType) DataType.Password), Display(Name="Confirm new password"), Compare("NewPassword", ErrorMessage="The new password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
+    }
+}
+

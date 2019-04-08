@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>73e2fd59-a5aa-4212-b30e-ba67995e7ec9</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DJCWebApi</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin" />
+    <Reference Include="System.Web.Optimization" />
+    <Reference Include="System.Web.Mvc" />
+    <Reference Include="Microsoft.AspNet.Identity.Core" />
+    <Reference Include="Microsoft.AspNet.Identity.Owin" />
+    <Reference Include="Microsoft.Owin.Security" />
+    <Reference Include="PICore" />
+    <Reference Include="System.Web" />
+    <Reference Include="Microsoft.Owin.Security.OAuth" />
+    <Reference Include="Owin" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="System.Web.Http.Cors" />
+    <Reference Include="PIWebSocket" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework" />
+    <Reference Include="System.Web.Http.Owin" />
+    <Reference Include="DJCWebApiBO" />
+    <Reference Include="System.Net.Http.Formatting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="EntityFramework" />
+    <Reference Include="Microsoft.Owin.Security.Cookies" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Http.WebHost" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PIDataService" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DJCWebApi\BundleConfig.cs" />
+    <Compile Include="DJCWebApi\FilterConfig.cs" />
+    <Compile Include="DJCWebApi\ApplicationUserManager.cs" />
+    <Compile Include="DJCWebApi\RouteConfig.cs" />
+    <Compile Include="DJCWebApi\Startup.cs" />
+    <Compile Include="DJCWebApi\WebApiConfig.cs" />
+    <Compile Include="DJCWebApi\WebApiExceptionFilterAttribute.cs" />
+    <Compile Include="DJCWebApi\ExceptionVO.cs" />
+    <Compile Include="DJCWebApi\WebApiApplication.cs" />
+    <Compile Include="DJCWebApi\ws\PublisherManager.cs" />
+    <Compile Include="DJCWebApi\ws\KB\DataCollecters\DemoPublisher.cs" />
+    <Compile Include="DJCWebApi\ws\KB\DataCollecters\KBPublisher.cs" />
+    <Compile Include="DJCWebApi\Utils\HttpHelper.cs" />
+    <Compile Include="DJCWebApi\Utils\EchartTool.cs" />
+    <Compile Include="DJCWebApi\Results\HttpRequestMessageExtensions.cs" />
+    <Compile Include="DJCWebApi\Results\ChallengeResult.cs" />
+    <Compile Include="DJCWebApi\Providers\OpenAuthorizationCodeProvider.cs" />
+    <Compile Include="DJCWebApi\Providers\OpenAuthorizationServerProvider.cs" />
+    <Compile Include="DJCWebApi\Providers\OpenRefreshTokenProvider.cs" />
+    <Compile Include="DJCWebApi\Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="DJCWebApi\Models\ErrMsg.cs" />
+    <Compile Include="DJCWebApi\Models\JsonModel.cs" />
+    <Compile Include="DJCWebApi\Models\Model.cs" />
+    <Compile Include="DJCWebApi\Models\AddExternalLoginBindingModel.cs" />
+    <Compile Include="DJCWebApi\Models\ChangePasswordBindingModel.cs" />
+    <Compile Include="DJCWebApi\Models\RegisterBindingModel.cs" />
+    <Compile Include="DJCWebApi\Models\RegisterExternalBindingModel.cs" />
+    <Compile Include="DJCWebApi\Models\RemoveLoginBindingModel.cs" />
+    <Compile Include="DJCWebApi\Models\SetPasswordBindingModel.cs" />
+    <Compile Include="DJCWebApi\Models\ExternalLoginViewModel.cs" />
+    <Compile Include="DJCWebApi\Models\ManageInfoViewModel.cs" />
+    <Compile Include="DJCWebApi\Models\UserInfoViewModel.cs" />
+    <Compile Include="DJCWebApi\Models\UserLoginInfoViewModel.cs" />
+    <Compile Include="DJCWebApi\Models\ApplicationUser.cs" />
+    <Compile Include="DJCWebApi\Models\ApplicationDbContext.cs" />
+    <Compile Include="DJCWebApi\Models\workfloor\QCBadItemModel.cs" />
+    <Compile Include="DJCWebApi\Models\workfloor\BaCpinfo.cs" />
+    <Compile Include="DJCWebApi\Models\stockout\StockoutModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockout\StockoutHeadModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockout\StockoutDetailModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockout\StockoutListModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockout\StockoutStoreListModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockin\PurStockinModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockin\PRoStockinKabanModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockin\PRoStockinBarcodeModel.cs" />
+    <Compile Include="DJCWebApi\Models\stockin\PRoStockinInno.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\CheckkcModel.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\CheckkcDatacodeDetail.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\PrecentachieveModels.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\SacuslistModels.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\Sacuslist2Models.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\SaSolist.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\SaSoProdStatus.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\SaSoCusModels.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\SaSoCus2Models.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\SaSoModels.cs" />
+    <Compile Include="DJCWebApi\Models\KCInventory\SaSoStatusModels.cs" />
+    <Compile Include="DJCWebApi\Controllers\AccountController.cs" />
+    <Compile Include="DJCWebApi\Controllers\CodesController.cs" />
+    <Compile Include="DJCWebApi\Controllers\DSController.cs" />
+    <Compile Include="DJCWebApi\Controllers\Paras.cs" />
+    <Compile Include="DJCWebApi\Controllers\FQCController.cs" />
+    <Compile Include="DJCWebApi\Controllers\HomeController.cs" />
+    <Compile Include="DJCWebApi\Controllers\InventorychangeController.cs" />
+    <Compile Include="DJCWebApi\Controllers\IPValidateController.cs" />
+    <Compile Include="DJCWebApi\Controllers\KBController.cs" />
+    <Compile Include="DJCWebApi\Controllers\KCIventoryController.cs" />
+    <Compile Include="DJCWebApi\Controllers\MachineKBController.cs" />
+    <Compile Include="DJCWebApi\Controllers\MachineSituationController.cs" />
+    <Compile Include="DJCWebApi\Controllers\PrecentachieveController.cs" />
+    <Compile Include="DJCWebApi\Controllers\PublisherController.cs" />
+    <Compile Include="DJCWebApi\Controllers\RoleController.cs" />
+    <Compile Include="DJCWebApi\Controllers\SaleCustController.cs" />
+    <Compile Include="DJCWebApi\Controllers\SalesKBController.cs" />
+    <Compile Include="DJCWebApi\Controllers\SalesDeliveryKBController.cs" />
+    <Compile Include="DJCWebApi\Controllers\SaSoProdStatusController.cs" />
+    <Compile Include="DJCWebApi\Controllers\SQLController.cs" />
+    <Compile Include="DJCWebApi\Controllers\StockAgeController.cs" />
+    <Compile Include="DJCWebApi\Controllers\StockinController.cs" />
+    <Compile Include="DJCWebApi\Controllers\StockoutController.cs" />
+    <Compile Include="DJCWebApi\Controllers\ValuesController.cs" />
+    <Compile Include="DJCWebApi\Controllers\WFInputController.cs" />
+    <Compile Include="DJCWebApi\Controllers\WSController.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\HelpPageConfig.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\HelpPageSampleGenerator.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\HelpPageSampleKey.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ImageSample.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\InvalidSample.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ObjectGenerator.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\SampleDirection.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\TextSample.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="DJCWebApi\Areas\HelpPage\Controllers\HelpController.cs" />
+  </ItemGroup>
+</Project>
